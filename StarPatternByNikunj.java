@@ -16,8 +16,12 @@ class StarPatternByNikunj{
 		sp.borderedRightAngle(row);
 		sp.reverseLeftAngle(row);
 		sp.rightAngle(row);
+		sp.pyramid(row);
+		sp.diagonals(row);
 		sp.numericLeftAngle(row);
 		sp.numericReverseLeftAngle(row);
+		sp.numericDiagonals(row);
+		
 	}
 	
 	void leftAngle(byte row){
@@ -121,6 +125,32 @@ class StarPatternByNikunj{
 		}
 	}
 	
+	void pyramid(byte row){
+		System.out.println("Pyramid");
+		for(int r=1; r<=row; r++){
+			for(int c=1; c<=row; c++){ 
+				if( r>=c && (r+c>=row+1))
+					System.out.print("*\t");
+				else
+					System.out.print("\t");
+			}
+			System.out.println();
+		}
+	}
+	
+	void diagonals(byte row){
+		System.out.println("Diagonals");
+		for(int r=1; r<=row; r++){
+			for(int c=1; c<=row; c++){ 
+				if( r==c || (r+c==row+1))
+					System.out.print("*\t");
+				else
+					System.out.print("\t");
+			}
+			System.out.println();
+		}
+	}
+	
 	void numericLeftAngle(byte row){
 		System.out.println("Numeric left angled triangle");
 		for(int r=1; r<=row; r++){
@@ -140,6 +170,24 @@ class StarPatternByNikunj{
 				System.out.print(c+"\t");
 			}
 			System.out.println();
+		}
+	}
+	
+	void numericDiagonals(byte row){
+		System.out.println("Numeric Diagonals");
+		byte primary = 1;
+		for(int r=1; r<=row; r++){
+			for(int c=1; c<=row; c++){  
+			if(r==c){
+				if( r<=(row/2)){
+				System.out.print(primary +"\t");
+				primary++;
+			}else{
+				System.out.print("\t");
+			}
+			}
+			System.out.println();
+		}
 		}
 	}
 

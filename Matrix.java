@@ -43,9 +43,9 @@ class Matrix{
 	void printMatrixUptoThree(){
 		
 		System.out.println("Matrix upto three rows three columns whose r & c==3");
-		for(int r=1; r<=3; r++){
-			for(int c=1; c<=3; c++){
-				if(r==3 && c==3){
+		for(int r=1; r<=5; r++){
+			for(int c=1; c<=5; c++){
+				if((r==3 && c<=3) || (c==3 && r<=3)){
 					System.out.print(r+""+c+"\t");
 				}else{
 					System.out.print("\t");
@@ -69,7 +69,6 @@ class Matrix{
 			}
 			System.out.println();
 		}
-		
 	}
 
 }
