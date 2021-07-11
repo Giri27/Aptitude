@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class StarPatternByNikunj{
+class StarPattern{
 	
 	public static void main(String a[]){
 		
