@@ -1,2 +1,0 @@
-# Aptitude
-programming aptitude
